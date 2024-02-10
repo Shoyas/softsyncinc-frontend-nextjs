@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat as NextMontserrat } from "next/font/google";
 import "./globals.css";
+import { NextFont } from "next/dist/compiled/@next/font";
+import Providers from "@/lib/Providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const Montserrat: NextFont = NextMontserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
 
 export const metadata: Metadata = {
   title: "ZARaN IT",
   description:
-    "ZARaN IT provides software development, web development, content researching for social media, SEO (Search Engine Optimization) and digital marketing.",
+    "ZARaN IT provides software development, web development, content researching for youtube, SEO (Search Engine Optimization) and digital marketing.",
 };
 
 export default function RootLayout({
@@ -16,8 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <Providers>
+      {/* className="max-w-7xl mx-auto p-4" */}
+      <html lang="en">
+        <body className={Montserrat.className}>
+          <main>{children}</main>
+        </body>
+      </html>
+    </Providers>
   );
 }
