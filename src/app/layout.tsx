@@ -22,7 +22,6 @@ export default function RootLayout({
 }>) {
   return (
     <Providers>
-      {/* className="max-w-7xl mx-auto p-4" */}
       <html lang="en">
         <body className={Montserrat.className}>
           <main>{children}</main>
