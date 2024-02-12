@@ -16,21 +16,21 @@ const DemoArea = () => {
                 <div className="flex items-center text-xl">
                     <span className="w-16 mt-2">
                         {" "}
-                        <Lottie animationData={RightCheckIcon} loop={3} />
+                        <Lottie animationData={RightCheckIcon} loop={true}/>
                     </span>
                     <h4 className="font-semibold text-[#453F41]">Fast Performance</h4>
                 </div>
                 <div className="flex items-center text-xl">
                     <span className="w-16 mt-2">
                         {" "}
-                        <Lottie animationData={RightCheckIcon} loop={3} />
+                        <Lottie animationData={RightCheckIcon} loop={true} />
                     </span>
-                    <h4 className="font-semibold text-[#453F41]">SEO Standard Code</h4>
+                    <h4 className="font-semibold text-[#45F41]">SEO Standard Code</h4>
                 </div>
                 <div className="flex items-center text-xl">
                     <span className="w-16 mt-2">
                         {" "}
-                        <Lottie animationData={RightCheckIcon} loop={3} />
+                        <Lottie animationData={RightCheckIcon} loop={true} />
                     </span>
                     <h4 className="font-semibold text-[#453F41]">Quick Support</h4>
                 </div>
