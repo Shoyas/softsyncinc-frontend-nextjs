@@ -1,10 +1,15 @@
 import type { MenuProps } from "antd";
 import {
+  UsergroupAddOutlined,
+  CodeOutlined,
   TeamOutlined,
   UserOutlined,
   ContainerOutlined,
   DropboxOutlined,
   UserSwitchOutlined,
+  ThunderboltOutlined,
+  MergeOutlined,
+  DeploymentUnitOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 import { USER_ROLE } from "@/constants/role";
@@ -30,9 +35,9 @@ const SidebarItems = (role: string) => {
 
   const commonAdminSidebarItems: MenuProps["items"] = [
     {
-      label: "Manage Work",
-      icon: <ContainerOutlined />,
-      key: `/${role}/work`,
+      label: "Work",
+      icon: <CodeOutlined />,
+      key: `/${role}/manage-work`,
       children: [
         {
           label: <Link href={`/${role}/create-work`}>Add Work</Link>,
@@ -45,9 +50,9 @@ const SidebarItems = (role: string) => {
       ],
     },
     {
-      label: "Manage Team Member",
-      icon: <ContainerOutlined />,
-      key: `/${role}/team-member`,
+      label: "Team Member",
+      icon: <UsergroupAddOutlined />,
+      key: `/${role}/manage-team-member`,
       children: [
         {
           label: (
@@ -64,9 +69,9 @@ const SidebarItems = (role: string) => {
       ],
     },
     {
-      label: "Manage Founder",
-      icon: <ContainerOutlined />,
-      key: `/${role}/founder`,
+      label: "Founder",
+      icon: <DeploymentUnitOutlined />,
+      key: `/${role}/manage-founder`,
       children: [
         {
           label: <Link href={`/${role}/create-founder`}>Add Founder</Link>,
@@ -79,9 +84,9 @@ const SidebarItems = (role: string) => {
       ],
     },
     {
-      label: "Manage Blog",
+      label: "Blog",
       icon: <ContainerOutlined />,
-      key: `/${role}/blog`,
+      key: `/${role}/manage-blog`,
       children: [
         {
           label: <Link href={`/${role}/create-blog`}>Add Blog</Link>,
@@ -94,9 +99,9 @@ const SidebarItems = (role: string) => {
       ],
     },
     {
-      label: "Manage Category",
-      icon: <ContainerOutlined />,
-      key: `/${role}/category`,
+      label: "Category",
+      icon: <ThunderboltOutlined />,
+      key: `/${role}/manage-category`,
       children: [
         {
           label: <Link href={`/${role}/create-category`}>Add Category</Link>,
@@ -109,9 +114,9 @@ const SidebarItems = (role: string) => {
       ],
     },
     {
-      label: "Manage Service",
-      icon: <ContainerOutlined />,
-      key: `/${role}/service`,
+      label: "Service",
+      icon: <MergeOutlined />,
+      key: `/${role}/manage-service`,
       children: [
         {
           label: <Link href={`/${role}/create-service`}>Add Service</Link>,
@@ -145,7 +150,7 @@ const SidebarItems = (role: string) => {
     ...defaultSidebarItems,
     ...commonAdminSidebarItems,
     {
-      label: "Manage Admin",
+      label: "Admin",
       icon: <TeamOutlined />,
       key: `/${role}/manage-admin`,
       children: [
