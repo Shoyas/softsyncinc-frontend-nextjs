@@ -30,6 +30,55 @@ const SidebarItems = (role: string) => {
 
   const commonAdminSidebarItems: MenuProps["items"] = [
     {
+      label: "Manage Work",
+      icon: <ContainerOutlined />,
+      key: `/${role}/work`,
+      children: [
+        {
+          label: <Link href={`/${role}/create-work`}>Add Work</Link>,
+          key: `/${role}/create-work`,
+        },
+        {
+          label: <Link href={`/${role}/work-list`}>Work List</Link>,
+          key: `/${role}/work-list`,
+        },
+      ],
+    },
+    {
+      label: "Manage Team Member",
+      icon: <ContainerOutlined />,
+      key: `/${role}/team-member`,
+      children: [
+        {
+          label: (
+            <Link href={`/${role}/create-team-member`}>Add Team Member</Link>
+          ),
+          key: `/${role}/create-team-member`,
+        },
+        {
+          label: (
+            <Link href={`/${role}/team-member-list`}>Team Member List</Link>
+          ),
+          key: `/${role}/team-member-list`,
+        },
+      ],
+    },
+    {
+      label: "Manage Founder",
+      icon: <ContainerOutlined />,
+      key: `/${role}/founder`,
+      children: [
+        {
+          label: <Link href={`/${role}/create-founder`}>Add Founder</Link>,
+          key: `/${role}/create-founder`,
+        },
+        {
+          label: <Link href={`/${role}/founder-list`}>Founder List</Link>,
+          key: `/${role}/founder-list`,
+        },
+      ],
+    },
+    {
       label: "Manage Blog",
       icon: <ContainerOutlined />,
       key: `/${role}/blog`,
@@ -41,6 +90,36 @@ const SidebarItems = (role: string) => {
         {
           label: <Link href={`/${role}/blog-list`}>Blog List</Link>,
           key: `/${role}/blog-list`,
+        },
+      ],
+    },
+    {
+      label: "Manage Category",
+      icon: <ContainerOutlined />,
+      key: `/${role}/category`,
+      children: [
+        {
+          label: <Link href={`/${role}/create-category`}>Add Category</Link>,
+          key: `/${role}/create-category`,
+        },
+        {
+          label: <Link href={`/${role}/category-list`}>Category List</Link>,
+          key: `/${role}/category-list`,
+        },
+      ],
+    },
+    {
+      label: "Manage Service",
+      icon: <ContainerOutlined />,
+      key: `/${role}/service`,
+      children: [
+        {
+          label: <Link href={`/${role}/create-service`}>Add Service</Link>,
+          key: `/${role}/create-service`,
+        },
+        {
+          label: <Link href={`/${role}/service-list`}>Service List</Link>,
+          key: `/${role}/service-list`,
         },
       ],
     },
