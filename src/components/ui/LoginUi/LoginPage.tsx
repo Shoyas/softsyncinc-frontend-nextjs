@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Button, Col, Row, message } from "antd";
 import { SubmitHandler } from "react-hook-form";
-import LoginImage from "../../../asset/next-page/login-image.svg";
+import LoginImage from "../../../asset/next-page/Computer-login-amico.svg";
 import Form from "@/components/Forms/Form";
 import FormInput from "@/components/Forms/FormInput";
 
