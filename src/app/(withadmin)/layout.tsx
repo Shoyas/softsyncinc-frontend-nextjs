@@ -1,8 +1,28 @@
-import Sidebar from "@/components/ui/Sidebar";
+"use client";
+
+import Sidebar from "@/components/ui/DashboardUi/Sidebar";
 import { Layout } from "antd";
-import Contents from "./../../components/ui/Contents";
+import Contents from "../../components/ui/DashboardUi/Contents";
+import { isLoggedIn } from "@/services/auth.service";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+  const adminLoggedIn = isLoggedIn();
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (!adminLoggedIn) {
+      router.push("/login");
+    } else {
+      setIsLoading(true);
+    }
+  }, [router]);
+
+  if (!isLoading) {
+    return <p>Loading...</p>;
+  }
   return (
     <Layout hasSider>
       <Sidebar />

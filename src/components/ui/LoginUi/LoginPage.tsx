@@ -6,6 +6,9 @@ import { SubmitHandler } from "react-hook-form";
 import LoginImage from "../../../asset/next-page/Computer-login-amico.svg";
 import Form from "@/components/Forms/Form";
 import FormInput from "@/components/Forms/FormInput";
+import { useAdminLoginMutation } from "@/redux/api/authApi";
+import { getUserInfo, storeAdminInfo } from "@/services/auth.service";
+import { useRouter } from "next/navigation";
 
 type FormValues = {
   userName: string;
@@ -13,9 +16,17 @@ type FormValues = {
 };
 
 const LoginPage = () => {
+  const [adminLogin] = useAdminLoginMutation();
+  const router = useRouter();
   const onSubmitLogin: SubmitHandler<FormValues> = async (data: any) => {
     try {
-      console.log(data);
+      const res = await adminLogin({ ...data }).unwrap();
+      console.log(res);
+      if (res?.data?.token) {
+        router.push("/profile");
+      }
+      storeAdminInfo({ accessToken: res?.data?.token });
+      console.log(res);
     } catch (error: any) {
       console.error(error.message);
     }

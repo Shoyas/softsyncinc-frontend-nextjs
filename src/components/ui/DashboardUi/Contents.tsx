@@ -2,12 +2,14 @@
 
 import { Layout } from "antd";
 import ZaranBreadCrumb from "./ZaranBreadCrumb";
+import Header from "./Header";
 const { Content } = Layout;
 
 const Contents = ({ children }: { children: React.ReactNode }) => {
   const base = "admin";
   return (
     <Content style={{ minHeight: "100vh" }}>
+      <Header />
       <ZaranBreadCrumb
         items={[
           {
