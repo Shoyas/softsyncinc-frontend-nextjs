@@ -1,22 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
 }
-body{
+
+body {
   overflow-x: hidden;
   background-image: url('../asset/banner.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Montserrat';
+  font-family: "Montserrat", sans-serif;
 }
-@media (min-width: 768px){
-  body{
+
+@media (min-width: 768px) {
+  body {
     overflow-x: hidden;
     /* overflow-y: hidden; */
   }
@@ -27,6 +30,7 @@ body{
 :where(.css-dev-only-do-not-override-1rqnfsa).ant-layout-header {
   color: transparent !important;
   background: transparent !important;
+  font-family: "Montserrat", sans-serif;
 }
 
 .top-nav {
@@ -40,10 +44,13 @@ body{
 }
 
 .top-nav a:not(.brand-link):hover {
-  color: #0C5ADB; /* or any other color you want for the hover effect */
+  color: #0C5ADB;
+  /* or any other color you want for the hover effect */
 }
+
 .top-nav a.brand-link:hover {
-  color: #453F41; /* or any other color you want for the hover effect */
+  color: #453F41;
+  /* or any other color you want for the hover effect */
 }
 
 .menu {
@@ -54,7 +61,7 @@ body{
   padding: 0;
 }
 
-.menu > li {
+.menu>li {
   margin: 0 1rem;
   overflow: hidden;
 }
@@ -96,16 +103,16 @@ body{
   margin-top: 8px;
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::before {
+#menu-toggle:checked+.menu-button-container .menu-button::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button {
+#menu-toggle:checked+.menu-button-container .menu-button {
   background: rgba(255, 255, 255, 0);
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::after {
+#menu-toggle:checked+.menu-button-container .menu-button::after {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
@@ -114,6 +121,7 @@ body{
   .menu-button-container {
     display: flex;
   }
+
   .menu {
     position: absolute;
     top: 0;
@@ -124,20 +132,23 @@ body{
     justify-content: center;
     align-items: center;
   }
-  #menu-toggle ~ .menu li {
+
+  #menu-toggle~.menu li {
     height: 0;
     margin: 0;
     padding: 0;
     border: 0;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  #menu-toggle:checked ~ .menu li {
+
+  #menu-toggle:checked~.menu li {
     border-top: 1px solid #0C5ADB;
     height: 4.5em;
     padding: -0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  .menu > li {
+
+  .menu>li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,12 +159,12 @@ body{
     background-color: #AAE1FF;
     z-index: 20;
   }
-  .menu > li:not(:last-child) {
+
+  .menu>li:not(:last-child) {
     border-bottom: 1px solid #AAE1FF;
   }
 }
 
 /* Navigation style and responsive ends  */
-
 
 
