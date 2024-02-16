@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat as NextMontserrat } from "next/font/google";
+
+import '../app.scss';
 import "./globals.css";
 import { NextFont } from "next/dist/compiled/@next/font";
 import Providers from "@/lib/Providers";
