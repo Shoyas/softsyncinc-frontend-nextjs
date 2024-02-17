@@ -2,7 +2,7 @@
 
 const ErrorPage = () => {
   return (
-    <div>
+    <div className="text-center mt-20">
       <h1>Something went wrong</h1>
     </div>
   );

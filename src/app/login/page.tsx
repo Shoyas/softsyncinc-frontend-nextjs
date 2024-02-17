@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ZARaN IT | Login",
-  description: "Founder by ZARan-IT",
+  description: "Founded by ZARan-IT",
 };
 
 const LoginPageWithMeta = () => {

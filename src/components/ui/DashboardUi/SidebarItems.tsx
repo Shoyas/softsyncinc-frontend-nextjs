@@ -22,7 +22,7 @@ const SidebarItems = (role: string) => {
       icon: <UserOutlined />,
       children: [
         {
-          label: <Link href={`/${role}/profile`}>Account</Link>,
+          label: <Link href={`/${role}`}>Account</Link>,
           key: `/${role}/profile`,
         },
         {

@@ -1,3 +1,5 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
 export interface IActiveProps {
   isActive: boolean;
 }
@@ -22,3 +24,14 @@ export type IGenericErrorResponse = {
   message: string;
   errorMessages: IGenericErrorMessage[];
 };
+
+export interface IAdmin {
+  id: string;
+  userName: string;
+  password: string;
+  securityCode: number;
+  adminImg: string;
+  role: string;
+  createdAt: string;
+  updatedAt: string;
+}

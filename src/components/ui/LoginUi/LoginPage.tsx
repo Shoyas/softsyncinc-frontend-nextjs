@@ -21,12 +21,11 @@ const LoginPage = () => {
   const onSubmitLogin: SubmitHandler<FormValues> = async (data: any) => {
     try {
       const res = await adminLogin({ ...data }).unwrap();
-      console.log(res);
-      if (res?.data?.token) {
+      const { token } = res;
+      if (token) {
         router.push("/profile");
       }
-      storeAdminInfo({ accessToken: res?.data?.token });
-      console.log(res);
+      storeAdminInfo({ accessToken: token });
     } catch (error: any) {
       console.error(error.message);
     }

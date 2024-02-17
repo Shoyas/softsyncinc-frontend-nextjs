@@ -20,7 +20,7 @@ instance.interceptors.request.use(
     return config;
   },
   function (error) {
-    // Do something with request error
+    //! Do something with request error
     return Promise.reject(error);
   }
 );
@@ -46,8 +46,6 @@ instance.interceptors.response.use(
       };
       return responseObject;
     }
-
-    // return Promise.reject(error);
   }
 );
 

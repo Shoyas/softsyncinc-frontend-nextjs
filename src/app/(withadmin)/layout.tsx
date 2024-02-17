@@ -6,6 +6,7 @@ import Contents from "../../components/ui/DashboardUi/Contents";
 import { isLoggedIn } from "@/services/auth.service";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import LoadingPage from "../loading";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const adminLoggedIn = isLoggedIn();
@@ -21,7 +22,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   }, [router]);
 
   if (!isLoading) {
-    return <p>Loading...</p>;
+    return <LoadingPage />;
   }
   return (
     <Layout hasSider>

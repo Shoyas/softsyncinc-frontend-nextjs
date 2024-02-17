@@ -2,13 +2,19 @@ import { Avatar, Button, Layout, Row, Space } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Dropdown } from "antd";
-import { removeUserInfo } from "@/services/auth.service";
+import { getUserInfo, removeUserInfo } from "@/services/auth.service";
 import { authKey } from "@/constants/storageKey";
 import { useRouter } from "next/navigation";
+import { useGetSingleAdminQuery } from "@/redux/api/adminApi";
+import { IAdmin } from "@/types";
 
 const { Header: AntHeader } = Layout;
 
 const Header = () => {
+  const { adminId } = getUserInfo() as any;
+  const { data, isLoading, isError } = useGetSingleAdminQuery(adminId);
+  const admin: IAdmin | undefined = data;
+
   const router = useRouter();
   const logout = () => {
     removeUserInfo(authKey);
@@ -34,6 +40,7 @@ const Header = () => {
             </Space>
           </a>
         </Dropdown>
+        <p className="text-white ml-2">{admin?.userName}</p>
       </Row>
     </AntHeader>
   );

@@ -1,8 +1,22 @@
+import { Space, Spin } from "antd";
+
 const LoadingPage = () => {
   return (
-    <div>
-      <h1>Loading...</h1>
-    </div>
+    <Space
+      direction="vertical"
+      style={{
+        width: "100%",
+        textAlign: "center",
+        justifyContent: "center",
+        height: "100vh",
+      }}
+    >
+      <Space>
+        <Spin tip="Loading" size="large">
+          
+        </Spin>
+      </Space>
+    </Space>
   );
 };
 
