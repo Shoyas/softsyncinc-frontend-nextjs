@@ -10,6 +10,7 @@ import { IAdmin } from "@/types";
 import { Card, Col, Row } from "antd";
 import Image from "next/legacy/image";
 import profileBlank from "../../../../asset/next-page/blank-profile.webp";
+import dayjs from "dayjs";
 
 const SuperAdminInner = () => {
   const { role, adminId } = getUserInfo() as any;
@@ -41,7 +42,6 @@ const SuperAdminInner = () => {
           }}
         >
           <Col sm={12} md={8} lg={8}>
-            <p>Profile Image</p>
             <Image
               src={admin?.adminImg ?? profileBlank}
               width={500}
@@ -58,6 +58,13 @@ const SuperAdminInner = () => {
               }}
             >
               <h3>Name: {admin?.userName}</h3>
+              <h3>Role: {admin?.role}</h3>
+              <h3>Security Code: {admin?.securityCode}</h3>
+              <h3>
+                Created At:{" "}
+                {admin?.createdAt &&
+                  dayjs(admin?.createdAt).format("MMM D, YYYY hh:mm A")}
+              </h3>
             </Card>
           </Col>
         </Row>
