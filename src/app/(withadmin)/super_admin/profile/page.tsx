@@ -12,7 +12,7 @@ import Image from "next/legacy/image";
 import profileBlank from "../../../../asset/next-page/blank-profile.webp";
 import dayjs from "dayjs";
 
-const SuperAdminInner = () => {
+const ProfileInnerPage = () => {
   const { role, adminId } = getUserInfo() as any;
   const { data, isLoading, isError } = useGetSingleAdminQuery(adminId);
   if (isLoading) {
@@ -73,4 +73,4 @@ const SuperAdminInner = () => {
   );
 };
 
-export default SuperAdminInner;
+export default ProfileInnerPage;

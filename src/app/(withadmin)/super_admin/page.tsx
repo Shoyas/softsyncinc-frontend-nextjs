@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import SuperAdminInner from "./profile/page";
+import ProfileInnerPage from "./profile/page";
 
 export const metadata: Metadata = {
   title: "ZARaN IT | Super Admin",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const SuperAdminPage = () => {
   return (
     <div style={{ margin: "10px" }}>
-      <SuperAdminInner />
+      <ProfileInnerPage />
     </div>
   );
 };

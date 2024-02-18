@@ -18,8 +18,12 @@ export const getUserInfo = () => {
 
 export const isLoggedIn = () => {
   const authToken = getFromLocalStorage(authKey);
-
   return !!authToken;
+};
+
+export const getUserAccessToken = () => {
+  const authToken = getFromLocalStorage(authKey);
+  return authToken;
 };
 
 export const removeUserInfo = (key: string) => {

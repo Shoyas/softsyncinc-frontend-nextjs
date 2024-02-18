@@ -7,7 +7,7 @@ import LoginImage from "../../../asset/next-page/Computer-login-amico.svg";
 import Form from "@/components/Forms/Form";
 import FormInput from "@/components/Forms/FormInput";
 import { useAdminLoginMutation } from "@/redux/api/authApi";
-import { getUserInfo, storeAdminInfo } from "@/services/auth.service";
+import { storeAdminInfo } from "@/services/auth.service";
 import { useRouter } from "next/navigation";
 
 type FormValues = {
@@ -15,7 +15,7 @@ type FormValues = {
   password: string;
 };
 
-const LoginPage = () => {
+const CommonLoginPage = () => {
   const [adminLogin] = useAdminLoginMutation();
   const router = useRouter();
   const onSubmitLogin: SubmitHandler<FormValues> = async (data: any) => {
@@ -26,8 +26,9 @@ const LoginPage = () => {
         router.push("/profile");
       }
       storeAdminInfo({ accessToken: token });
+      message.success("Login success");
     } catch (error: any) {
-      console.error(error.message);
+      message.error("Password is incorrect");
     }
   };
   return (
@@ -77,4 +78,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default CommonLoginPage;

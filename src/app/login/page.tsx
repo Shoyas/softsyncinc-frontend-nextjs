@@ -1,4 +1,4 @@
-import LoginPage from "@/components/ui/LoginUi/LoginPage";
+import CommonLoginPage from "@/components/ui/LoginUi/CommonLoginPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   description: "Founded by ZARan-IT",
 };
 
-const LoginPageWithMeta = () => {
+const LoginPage = () => {
   return (
     <div>
-      <LoginPage />
+      <CommonLoginPage />
     </div>
   );
 };
 
-export default LoginPageWithMeta;
+export default LoginPage;
