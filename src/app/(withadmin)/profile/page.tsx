@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const ProfilePage = () => {
   return (
-    <div>
+    <div style={{ margin: "10px" }}>
       <CommonProfilePage />
     </div>
   );

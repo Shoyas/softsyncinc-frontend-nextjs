@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const SuperAdminPage = () => {
   return (
-    <div>
+    <div style={{ margin: "10px" }}>
       <SuperAdminInner />
     </div>
   );

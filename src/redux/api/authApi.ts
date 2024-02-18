@@ -13,7 +13,21 @@ export const authApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: [tagTypes.admin],
     }),
+
+    changePasswordByToken: build.query({
+      query: (data) => {
+        return {
+          url: `${AUTH_URL}/change-password`,
+          method: "POST",
+          headers: {
+            Authorization: `${data.authKey}`,
+          },
+          data,
+        };
+      },
+      providesTags: [tagTypes.admin],
+    }),
   }),
 });
 
-export const { useAdminLoginMutation } = authApi;
+export const { useAdminLoginMutation, useChangePasswordByTokenQuery } = authApi;

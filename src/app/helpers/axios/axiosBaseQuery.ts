@@ -8,7 +8,7 @@ export const axiosBaseQuery =
     { baseUrl }: { baseUrl: string } = { baseUrl: "" }
   ): BaseQueryFn<
     {
-      url: string;
+      url?: string;
       method?: AxiosRequestConfig["method"];
       data?: AxiosRequestConfig["data"];
       meta?: IMeta;
