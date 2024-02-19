@@ -40,7 +40,7 @@ const CommonLoginPage = () => {
       }}
     >
       <Col sm={12} md={16} lg={10}>
-        <Image src={LoginImage} width={500} alt="Login Image" />
+        <Image src={LoginImage} width={420} alt="Login Image" />
       </Col>
       <Col sm={12} md={8} lg={8}>
         <h1 style={{ margin: "15px 0px" }}>Login your account</h1>
