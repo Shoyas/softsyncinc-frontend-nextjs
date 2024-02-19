@@ -63,7 +63,7 @@ const CommonChangePasswordPage = () => {
         >
           <div
             style={{
-              border: "1px double lightgray",
+              border: "1px double #002140",
               borderRadius: "5px",
               padding: "15px",
               margin: "10px 0px",
