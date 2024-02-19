@@ -1,11 +1,11 @@
 import dynamic from "next/dynamic";
-import { Col, Row } from "antd";
 import DemoArea from "./DemoArea/DemoArea";
 import HeroArea from "./HeroArea/HeroArea";
 import WhyChooseArea from "./WhyChooseUs/WhyChooseUs";
 import ResponsiveLayoutArea from "./ResponsiveLayout/ResponsiveLayout";
 import ProjectsDone from "./ProjectsDone/ProjectsDone";
 import Footer from "@/components/sharedUi/Footer";
+import HelpingCustomer from "./HelpingCustomer/HelpingCustomer";
 
 const Navbar = dynamic(() => import("../../sharedUi/Navbar"), {
   ssr: false,
@@ -14,17 +14,16 @@ const Navbar = dynamic(() => import("../../sharedUi/Navbar"), {
 const HomeContainerPage = () => {
   return (
     <div>
-      <Row justify="center">
-        <Col span={22}>
-          <Navbar isActive={false} />
-          <HeroArea/>
-          <DemoArea/>
-          <WhyChooseArea/>
-          <ResponsiveLayoutArea/>
-          <ProjectsDone/>
-          <Footer/>
-        </Col>
-      </Row>
+      <Navbar />
+      <div className="max-w-7xl mx-auto">
+        <HeroArea />
+        <DemoArea />
+        <WhyChooseArea />
+        <ResponsiveLayoutArea />
+        <ProjectsDone />
+        <HelpingCustomer />
+      </div>
+      <Footer />
     </div>
   );
 };

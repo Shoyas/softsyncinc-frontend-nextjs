@@ -1,71 +1,82 @@
 "use client";
-import { Layout } from "antd";
+
 import Link from "next/link";
+import { useState } from "react";
 
-const { Header: NavigationMenu } = Layout;
+import { RiCloseFill, RiMenu3Fill } from "react-icons/ri";
 
-const Navbar = ({ isActive }: { isActive: boolean }) => {
+const Navbar = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setOpenMenu(!openMenu);
+  };
+
+  const navList = (
+    <>
+      <Link href="/" className="text-gray">
+        Home
+      </Link>
+      <Link href="/about" className="text-gray">
+        About
+      </Link>
+      <Link href="/works" className="text-gray">
+        Works
+      </Link>
+      <Link href="/ourTeam" className="text-gray">
+        Our Team
+      </Link>
+    </>
+  );
+
   return (
-    <NavigationMenu className="top-nav">
-      <div>
-        <Link
-          href="/"
-          className="lg:text-4xl md:text-2xl text-xl text-center font-semibold mb-1 text-[#453F41] brand-link"
-        >
-          ZARaN IT
-        </Link>
-      </div>
-      <input id="menu-toggle" type="checkbox" />
-      <label className="menu-button-container" htmlFor="menu-toggle">
-        <div className="menu-button"></div>
-      </label>
-      <div className="menu text-xl font-semibold">
-        <li>
-          <Link
-            href="/"
-            className={`text-[#453F41]${isActive ? "text-[#0C5ADB]" : "text-[#453F41]"
-              }`}
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/about"
-            className="text-[#453F41] "
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/works"
-            className="text-[#453F41] "
-          >
-            Works
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/blogs"
-            className="text-[#453F41] "
-          >
-            Blogs
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/contact"
-            className="relative inline-flex items-center justify-start px-6 py-2 overflow-hidden transition-all bg-[#323232] rounded-full hover:bg-white group"
-          >
-            <span className="w-60 h-48 rounded rotate-[-40deg] bg-[#0C5ADB] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0" />
-            <span className="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-white">
-              Contact
-            </span>
-          </Link>
-        </li>
-      </div>
-    </NavigationMenu>
+    <>
+      <div onClick={() => setOpenMenu(false)} className={`fixed ${!openMenu ? "invisible" : "visible"} w-screen h-screen backdrop-blur-sm top-0 left-0`}></div>
+      <header className="backdrop-blur-3xl sticky top-0 z-50 w-full shadow-md">
+        <nav className="flex justify-between items-center py-6 max-w-7xl mx-auto px-3 lg:px-0">
+          {/* logo */}
+          <div>
+            <Link className="text-blue font-semibold text-xl" href="/">ZARaN IT</Link>
+          </div>
+
+          {/* desktop nav */}
+          <div className="hidden md:flex gap-5 text-base font-medium">
+            {navList}
+          </div>
+
+          {/* hamburger or close icon */}
+          <div className="md:hidden cursor-pointer z-50" onClick={toggleMenu}>
+            {
+              openMenu ? <RiCloseFill size={25} /> : <RiMenu3Fill size={25} />
+            }
+          </div>
+
+          {/* mobile nav */}
+          <div className={`${openMenu ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform -translate-x-full'} transition-transform absolute top-0 left-0 w-1/2 h-screen bg-slate-400/95 flex flex-col p-10 gap-6 text-base font-medium duration-700`} onClick={() => setOpenMenu(false)}>
+            {navList}
+            <hr className="w-full border-lightGray" />
+
+            <Link href="/contactUs" className="relative px-5 py-2 font-medium text-white group">
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-blueLight group-hover:bg-blue group-hover:skew-x-12"></span>
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-blue group-hover:bg-blueLight group-hover:-skew-x-12"></span>
+              <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-purple-600 -rotate-12"></span>
+              <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-purple-400 -rotate-12"></span>
+              <span className="relative">Contact Us</span>
+            </Link>
+          </div>
+
+          <div className="hidden md:block">
+            <Link href="/contactUs" className="relative px-5 py-2 font-medium text-white group">
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-blueLight group-hover:bg-blue group-hover:skew-x-12"></span>
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-blue group-hover:bg-blueLight group-hover:-skew-x-12"></span>
+              <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-purple-600 -rotate-12"></span>
+              <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-purple-400 -rotate-12"></span>
+              <span className="relative">Contact Us</span>
+            </Link>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 };
 

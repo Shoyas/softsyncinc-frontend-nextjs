@@ -3,19 +3,19 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <div className="mt-20 mx-3">
+        <div className="mt-28 px-3 lg:px-0 mb-10">
             <Link href="/" className="flex flex-col items-center justify-center">
-                <h1 className="text-5xl font-semibold text-center text-[#0C5ADB]">
+                <p className="md:text-5xl text-3xl font-bold text-center text-blue">
                     ZARaN IT
-                </h1>
+                </p>
             </Link>
-            <div className="flex flex-col items-center justify-center mt-5 mb-3">
-                <h4 className="text-sm text-center text-[#453F41]">
+            <div className="flex flex-col items-center justify-center my-2">
+                <p className="text-sm text-center text-gray font-bold">
                     Copyright © {new Date().getFullYear()} - All right reserved by{" "}
-                    <span className="text-[#0C5ADB] underline">
-                        <Link href="/">ZARaN IT</Link>
+                    <span>
+                        <Link className="text-blue underline font-bold" href="/">ZARaN IT</Link>
                     </span>
-                </h4>
+                </p>
             </div>
         </div>
     );

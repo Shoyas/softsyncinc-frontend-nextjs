@@ -1,112 +1,74 @@
 "use client"
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/free-mode";
-import { Autoplay, FreeMode } from "swiper/modules";
 
+
+import { Swiper, SwiperSlide } from 'swiper/react';
 import iconOne from "../../../../asset/1.webp";
 import iconTwo from "../../../../asset/2.webp";
 import iconThree from "../../../../asset/3.webp";
 import iconFour from "../../../../asset/4.webp";
 import Image from "next/image";
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import { Autoplay, FreeMode } from 'swiper/modules';
+
 
 const WhyChooseArea = () => {
     return (
-        <div className="mt-20">
-            <div className="mx-3 pt-20 grid md:grid-cols-3 grid-cols-1 gap-4 grid-flow-row-dense ">
-                <div className="pt-5">
-                    <h1 className="text-2xl text-[#0C5ADB] font-semibold">
+        <div className="mt-20 px-3 lg:px-0">
+            <div className="grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-10">
+                <div className='text-center'>
+                    <span className="md:text-3xl text-lg font-bold text-blue">
                         WHY CHOOSE US
-                    </h1>
-                    <h4 className="text-4xl text-[#453F41] pt-5">
-                        Save your time with <br />a lot of features
-                    </h4>
+                    </span>
+                    <p className="md:text-2xl text-base font-bold text-gray">
+                        Save your time with a <br />lot of features
+                    </p>
                 </div>
 
                 <div className="col-span-2">
                     <Swiper
-                        breakpoints={{
-                            340: {
-                                slidesPerView: 2,
-                                spaceBetween: 15,
-                            },
-                            700: {
-                                slidesPerView: 3,
-                                spaceBetween: 15,
-                            },
-                        }}
+                        slidesPerView={2}
+                        spaceBetween={5}
                         freeMode={true}
+                        pagination={{
+                            clickable: true,
+                        }}
                         modules={[FreeMode, Autoplay]}
-                        autoplay={{ delay: 2000 }}
-                        loop={true}
-                        className="max-w-[90%] lg:max-w-[80%]"
+                        autoplay={{ delay: 1500 }}
+                        loop= {true}
+                        className="mySwiper"
                     >
                         <SwiperSlide>
-                            <div className="w-32 h-32">
-                                <Image
-                                    width={50}
-                                    height={50}
-                                    loading="lazy"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    quality={100}
-                                    layout="responsive"
-                                    className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-                                    src={iconOne}
-                                    alt="iconOne"
-                                />
+                            <div className="flex items-center">
+                                <div className="flex flex-col justify-center items-center">
+                                    <Image className="lg:w-32 lg:h-32 md:w-20 md:h-20 w-14 h-14" src={iconOne} alt="iconOne" />
+                                    <p className="font-bold md:text-xl text-base text-gray">Fast Performance</p>
+                                </div>
                             </div>
-                            <h1 className="font-semibold text-[#453F41]">Fast Performance</h1>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="w-32 h-32">
-                                <Image
-                                    width={50}
-                                    height={50}
-                                    loading="lazy"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    quality={100}
-                                    layout="responsive"
-                                    className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-                                    src={iconTwo}
-                                    alt="iconTwo"
-                                />
+                            <div className="flex items-center">
+                                <div className="flex flex-col justify-center items-center">
+                                    <Image className="lg:w-32 lg:h-32 md:w-20 md:h-20 w-14 h-14" src={iconTwo} alt="iconOne" />
+                                    <p className="font-bold md:text-xl text-base text-gray">Standard Code</p>
+                                </div>
                             </div>
-                            <h1 className="font-semibold text-[#453F41]">Standard Code</h1>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="w-32 h-32">
-                                <Image
-                                    width={50}
-                                    height={50}
-                                    loading="lazy"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    quality={100}
-                                    layout="responsive"
-                                    className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-                                    src={iconThree}
-                                    alt="iconThree"
-                                />
+                            <div className="flex items-center">
+                                <div className="flex flex-col justify-center items-center">
+                                    <Image className="lg:w-32 lg:h-32 md:w-20 md:h-20 w-14 h-14" src={iconThree} alt="iconOne" />
+                                    <p className="font-bold md:text-xl text-base text-gray">Responsive Design</p>
+                                </div>
                             </div>
-                            <h1 className="font-semibold text-[#453F41]">
-                                Responsive Design
-                            </h1>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="w-32 h-32">
-                                <Image
-                                    width={50}
-                                    height={50}
-                                    loading="lazy"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                    quality={100}
-                                    layout="responsive"
-                                    className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-                                    src={iconFour}
-                                    alt="iconFour"
-                                />
+                            <div className="flex items-center">
+                                <div className="flex flex-col justify-center items-center ">
+                                    <Image className="lg:w-32 lg:h-32 md:w-20 md:h-20 w-14 h-14" src={iconFour} alt="iconOne" />
+                                    <p className="font-bold md:text-xl text-base text-gray">Quick Support</p>
+                                </div>
                             </div>
-                            <h1 className="font-semibold text-[#453F41]">Quick Support</h1>
                         </SwiperSlide>
                     </Swiper>
                 </div>

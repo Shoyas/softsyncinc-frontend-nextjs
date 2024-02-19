@@ -1,6 +1,6 @@
 "use client"
+import CountUp from 'react-countup';
 import "../../../ui/HomeUi/ProjectsDone/Style.css"
-import Marquee from "react-fast-marquee";
 import projectOne from "../../../../asset/projects-img/pc-builder-1.webp";
 import projectTwo from "../../../../asset/projects-img/athena-1.webp";
 import projectThree from "../../../../asset/projects-img/creative-agency-1.webp";
@@ -17,157 +17,93 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import '../../../ui/HomeUi/ProjectsDone/Style.css'
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
+
 
 const ProjectsDone = () => {
   return (
-    <div className="mt-20 mx-3">
-      <h1 className="text-7xl font-semibold text-center text-[#0C5ADB]">35+</h1>
-      <h1 className="text-4xl font-semibold text-center text-[#453F41]">
+    <div className="mt-20 px-3 lg:px-0">
+      <h1 className="md:text-5xl text-3xl font-bold text-center text-blue"><CountUp delay={1} end={35} />+</h1>
+      <h1 className="md:text-3xl text-xl font-bold text-center text-gray">
         Projects we have done
       </h1>
-      <Marquee pauseOnHover={true} className="mt-20 mb-20">
-        <div className="flex items-center gap-4 mr-5">
-          <div className="flex items-center gap-2 w-96">
-            <Image
-              width={50}
-              height={50}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              quality={100}
-              layout="responsive"
-              className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-              src={projectOne}
-              alt="projectOne"
-            />
-          </div>
-          <div className="flex items-center gap-2 w-96">
-            <Image
-              width={50}
-              height={50}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              quality={100}
-              layout="responsive"
-              className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-              src={projectTwo}
-              alt="projectOne"
-            />
-          </div>
-          <div className="flex items-center gap-2 w-96">
-            <Image
-              width={50}
-              height={50}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              quality={100}
-              layout="responsive"
-              className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-              src={projectThree}
-              alt="projectOne"
-            />
-          </div>
-          <div className="flex items-center gap-2 w-96">
-            <Image
-              width={50}
-              height={50}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              quality={100}
-              layout="responsive"
-              className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-              src={projectFour}
-              alt="projectOne"
-            />
-          </div>
-          <div className="flex items-center gap-2 w-96">
-            <Image
-              width={50}
-              height={50}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              quality={100}
-              layout="responsive"
-              className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-              src={projectFive}
-              alt="projectOne"
-            />
-          </div>
-          <div className="flex items-center gap-2 w-96">
-            <Image
-              width={50}
-              height={50}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              quality={100}
-              layout="responsive"
-              className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-              src={projectSix}
-              alt="projectOne"
-            />
-          </div>
-          <div className="flex items-center gap-2 w-96">
-            <Image
-              width={50}
-              height={50}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              quality={100}
-              layout="responsive"
-              className="w-full h-full ease-in-out duration-500 rounded-2xl object-top object-cover hover:object-bottom"
-              src={projectSeven}
-              alt="projectOne"
-            />
-          </div>
-        </div>
-      </Marquee>
 
-
-      
-      <div className="relative h-full">
-      <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <Image width={50} height={300} src={projectOne} alt="img" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image width={50} height={300} src={projectTwo} alt="img" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image width={50} height={300} src={projectThree} alt="img" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image width={50} height={300} src={projectFour} alt="img" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image width={50} height={300} src={projectFive} alt="img" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image width={50} height={300} src={projectSix} alt="img" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image width={50} height={300} src={projectSeven} alt="img" />
-        </SwiperSlide>
-
-      </Swiper>
+      <div className="flex justify-center items-center flex-col">
+        <Swiper
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          navigation={true}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          slidesPerView={'auto'}
+          coverflowEffect={{
+            rotate: 5,
+            stretch: 0,
+            depth: 300,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+          className="mySwiper"
+          loop={true}
+        >
+          <div className="flex justify-center items-center flex-col">
+            <SwiperSlide>
+              <Image className="img rounded-xl" style={{
+                width: '50%',
+                height: 'auto',
+              }} src={projectOne} alt="projectOne" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image className="img rounded-xl" style={{
+                width: '50%',
+                height: 'auto',
+              }} src={projectTwo} alt="projectTwo" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image className="img rounded-xl" style={{
+                width: '50%',
+                height: 'auto',
+              }} src={projectThree} alt="projectThree" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image className="img rounded-xl" style={{
+                width: '50%',
+                height: 'auto',
+              }} src={projectFour} alt="projectFour" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image className="img rounded-xl" style={{
+                width: '50%',
+                height: 'auto',
+              }} src={projectFive} alt="projectFive" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image className="img rounded-xl" style={{
+                width: '50%',
+                height: 'auto',
+              }} src={projectSix} alt="projectSix" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image className="img rounded-xl" style={{
+                width: '50%',
+                height: 'auto',
+              }} src={projectSeven} alt="projectSeven" />
+            </SwiperSlide>
+          </div>
+        </Swiper>
       </div>
-
 
     </div>
   );
