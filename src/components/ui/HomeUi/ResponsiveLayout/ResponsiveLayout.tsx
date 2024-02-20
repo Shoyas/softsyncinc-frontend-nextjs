@@ -13,13 +13,13 @@ const ResponsiveLayoutArea = () => {
                     <Lottie className="w-full" animationData={laptopAnimation} loop={true} />
                 </div>
                 <div>
-                    <h1 className="lg:text-5xl md:text-3xl text-xl font-bold text-gray text-center lg:text-left">
+                    <span className="lg:text-5xl md:text-3xl text-xl font-bold text-gray text-center lg:text-left">
                         Responsive Layout Retina Ready Design
-                    </h1>
-                    <h4 className="lg:text-xl md:text-lg text-sm font-bold text-gray lg:my-5 my-2 text-center lg:text-left">
+                    </span>
+                    <p className="lg:text-xl md:text-lg text-sm font-bold text-gray lg:my-5 my-2 text-center lg:text-left">
                         All the pages of our designed website are responsive. We used CSS
                         framework & RAW CSS to build the website.
-                    </h4>
+                    </p>
                     <div className="lg:mt-10 mt-5 flex justify-center lg:justify-start">
                         <Link href="/contactUs" className="relative px-5 py-2 font-medium text-white group">
                             <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-blueLight group-hover:bg-blue group-hover:skew-x-12"></span>

@@ -9,9 +9,10 @@ import demoImageThree from "../../../../asset/pic/Starbucks.webp"
 const DemoArea = () => {
     return (
         <div className="mt-20 px-3 lg:px-0">
-            <h1 className="lg:text-5xl md:text-4xl text-xl font-bold text-center text-blue underline">
-                Stunning Demos
-            </h1>
+            <h4 className="mb-32 text-3xl font-bold text-center">
+                <p className="text-blue underline dark:text-primary-400">Stunning Demos</p>
+            </h4>
+
             {/* check mark */}
             <div className="grid grid-cols-3 md:gap-5 gap-2 items-center mt-5">
                 <div className="flex justify-center items-center">
@@ -35,8 +36,7 @@ const DemoArea = () => {
                     data-aos="fade-up"
                     data-aos-delay="50"
                     data-aos-duration="1000"
-                    className="bg-gradient-to-br from-gradientBlue via-gradientGray to-gradientBlue rounded-3xl p-7 "
-                >
+                    className="bg-gradient-to-br from-gradientBlue via-gradientGray to-gradientBlue rounded-3xl p-7 cursor-pointer">
                     <div className="h-96 transition-all">
                         <Image
                             className="w-full h-full ease-in-out duration-[5s] rounded-2xl object-top object-cover hover:object-bottom"
@@ -60,8 +60,7 @@ const DemoArea = () => {
                     data-aos="fade-up"
                     data-aos-delay="50"
                     data-aos-duration="1000"
-                    className="bg-gradient-to-br from-gradientBlue via-gradientGray to-gradientBlue rounded-3xl p-7 "
-                >
+                    className="bg-gradient-to-br from-gradientBlue via-gradientGray to-gradientBlue rounded-3xl p-7 cursor-pointer">
                     <div className="h-96 transition-all">
                         <Image
                             className="w-full h-full ease-in-out duration-[5s] rounded-2xl object-top object-cover hover:object-bottom"
@@ -85,8 +84,7 @@ const DemoArea = () => {
                     data-aos="fade-up"
                     data-aos-delay="50"
                     data-aos-duration="1000"
-                    className="bg-gradient-to-br from-gradientBlue via-gradientGray to-gradientBlue rounded-3xl p-7 "
-                >
+                    className="bg-gradient-to-br from-gradientBlue via-gradientGray to-gradientBlue rounded-3xl p-7 cursor-pointer">
                     <div className="h-96 transition-all">
                         <Image
                             className="w-full h-full ease-in-out duration-[5s] rounded-2xl object-top object-cover hover:object-bottom"
