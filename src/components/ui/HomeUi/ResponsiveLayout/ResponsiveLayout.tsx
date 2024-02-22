@@ -7,16 +7,16 @@ import Lottie from "lottie-react";
 
 const ResponsiveLayoutArea = () => {
     return (
-        <div className="mt-20 px-3 lg:px-0">
+        <div className="mt-24 px-3 lg:px-0">
             <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-6">
                 <div>
                     <Lottie className="w-full" animationData={laptopAnimation} loop={true} />
                 </div>
                 <div>
-                    <span className="lg:text-5xl md:text-3xl text-xl font-bold text-gray text-center lg:text-left">
+                    <h4 className="md:text-3xl text-lg font-bold leading-normal text-blue text-center lg:text-left">
                         Responsive Layout Retina Ready Design
-                    </span>
-                    <p className="lg:text-xl md:text-lg text-sm font-bold text-gray lg:my-5 my-2 text-center lg:text-left">
+                    </h4>
+                    <p className="text-lg text-gray mt-3 text-center lg:text-left">
                         All the pages of our designed website are responsive. We used CSS
                         framework & RAW CSS to build the website.
                     </p>

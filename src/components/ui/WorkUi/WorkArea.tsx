@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client"
 import Image from "next/image";
 import demoImageOne from "../../../../src/asset/pic/Eventvibehub.webp"
@@ -7,7 +8,7 @@ import demoImageThree from "../../../../src/asset/pic/Starbucks.webp"
 
 const WorkArea = () => {
   return (
-    <div className="mt-20 px-3 lg:px-0 max-w-7xl mx-auto">
+    <div className="mt-24 px-3 lg:px-0 max-w-7xl mx-auto">
       <h4 className="mb-32 text-3xl font-bold text-center">
         <p className="text-blue underline dark:text-primary-400">We've completed</p>
       </h4>
@@ -28,8 +29,8 @@ const WorkArea = () => {
           </div>
           <div className="group flex items-center justify-between mt-4">
             <div className="">
-              <h2 className="text-sm text-white">Gamer Zone</h2>
-              <p className="text-white md:text-2xl text-xl font-medium">
+              <h2 className="text-base text-white">Gamer Zone</h2>
+              <p className="text-white text-lg font-bold">
                 Online Games Shop
               </p>
             </div>
@@ -52,8 +53,8 @@ const WorkArea = () => {
           </div>
           <div className="group flex items-center justify-between mt-4">
             <div className="">
-              <h2 className="text-sm text-white">Event Management</h2>
-              <p className="text-white md:text-2xl text-xl font-medium">
+              <h2 className="text-base text-white">Event Management</h2>
+              <p className="text-white text-lg font-bold">
                 Online Event Management
               </p>
             </div>
@@ -76,8 +77,8 @@ const WorkArea = () => {
           </div>
           <div className="group flex items-center justify-between mt-4">
             <div className="">
-              <h2 className="text-sm text-white">Coffee & Ice-cream Shop</h2>
-              <p className="text-white md:text-2xl text-xl font-medium">
+              <h2 className="text-base text-white">Coffee & Ice-cream Shop</h2>
+              <p className="text-white text-lg font-bold">
                 Online Coffee & Ice-cream Shop
               </p>
             </div>

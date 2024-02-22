@@ -8,24 +8,24 @@ import demoImageThree from "../../../../asset/pic/Starbucks.webp"
 
 const DemoArea = () => {
     return (
-        <div className="mt-20 px-3 lg:px-0">
-            <h4 className="mb-32 text-3xl font-bold text-center">
-                <p className="text-blue underline dark:text-primary-400">Stunning Demos</p>
+        <div className="mt-24 px-3 lg:px-0">
+            <h4 className="lg:text-4xl md:text-3xl text-2xl font-bold text-center leading-normal">
+                <p className="text-blue dark:text-primary-400">Stunning Demos</p>
             </h4>
 
             {/* check mark */}
-            <div className="grid grid-cols-3 md:gap-5 gap-2 items-center mt-5">
+            <div className="flex justify-center gap-2 items-center">
                 <div className="flex justify-center items-center">
                     <Lottie className="md:w-20 w-10" animationData={checkAnimation} loop={true} />
-                    <h4 className="font-bold md:text-xl md:leading-6 leading-none text-xs text-center text-gray">Fast Performance</h4>
+                    <h4 className="font-bold md:text-base text-sm text-center leading-normal text-gray">Fast Performance</h4>
                 </div>
                 <div className="flex justify-center items-center">
                     <Lottie className="md:w-20 w-10" animationData={checkAnimation} loop={true} />
-                    <h4 className="font-bold md:text-xl md:leading-6 leading-none text-xs text-center text-gray">Seo Standard Code</h4>
+                    <h4 className="font-bold md:text-base text-sm text-center leading-normal text-gray">Seo Standard Code</h4>
                 </div>
                 <div className="flex justify-center items-center">
                     <Lottie className="md:w-20 w-10" animationData={checkAnimation} loop={true} />
-                    <h4 className="font-bold md:text-xl md:leading-6 leading-none text-xs text-center text-gray">Quick Support</h4>
+                    <h4 className="font-bold md:text-base text-sm text-center leading-normal text-gray">Quick Support</h4>
                 </div>
             </div>
 
@@ -46,8 +46,8 @@ const DemoArea = () => {
                     </div>
                     <div className="group flex items-center justify-between mt-4">
                         <div className="">
-                            <h2 className="text-sm text-white">Gamer Zone</h2>
-                            <p className="text-white md:text-2xl text-xl font-medium">
+                            <h2 className="text-base text-white">Gamer Zone</h2>
+                            <p className="text-white text-lg font-bold">
                                 Online Games Shop
                             </p>
                         </div>
@@ -70,8 +70,8 @@ const DemoArea = () => {
                     </div>
                     <div className="group flex items-center justify-between mt-4">
                         <div className="">
-                            <h2 className="text-sm text-white">Event Management</h2>
-                            <p className="text-white md:text-2xl text-xl font-medium">
+                            <h2 className="text-base text-white">Event Management</h2>
+                            <p className="text-white text-lg font-bold">
                                 Online Event Management
                             </p>
                         </div>
@@ -94,8 +94,8 @@ const DemoArea = () => {
                     </div>
                     <div className="group flex items-center justify-between mt-4">
                         <div className="">
-                            <h2 className="text-sm text-white">Coffee & Ice-cream Shop</h2>
-                            <p className="text-white md:text-2xl text-xl font-medium">
+                            <h2 className="text-base text-white">Coffee & Ice-cream Shop</h2>
+                            <p className="text-white text-lg font-bold">
                                 Online Coffee & Ice-cream Shop
                             </p>
                         </div>

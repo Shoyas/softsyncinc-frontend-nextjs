@@ -7,13 +7,13 @@ import Lottie from "lottie-react";
 
 const HelpingCustomer = () => {
     return (
-        <div className="mt-20 px-3 lg:px-0">
+        <div className="mt-24 px-3 lg:px-0">
             <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-6">
                 <div>
-                    <h1 className="lg:text-5xl md:text-3xl text-xl font-bold text-gray text-center lg:text-left">
+                    <h1 className="md:text-3xl text-lg font-bold leading-normal text-blue text-center lg:text-left">
                         We've been helping customer globally.
                     </h1>
-                    <h4 className="lg:text-xl md:text-lg text-sm font-bold text-gray lg:my-5 my-2 text-center lg:text-left">
+                    <h4 className="text-lg text-gray mt-3 text-center lg:text-left">
                         Aliquam tristique libero at dui sodales, et placerat orci lobortis. Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem.
                     </h4>
                     <div className="lg:mt-10 mt-5 flex justify-center lg:justify-start">

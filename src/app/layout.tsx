@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Montserrat as NextMontserrat } from "next/font/google";
 
 import '../app.scss';
 import "./globals.css";
-import { NextFont } from "next/dist/compiled/@next/font";
 import Providers from "@/lib/Providers";
 
-const Montserrat: NextFont = NextMontserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
+// const Montserrat: NextFont = NextMontserrat({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600"],
+// });
+// const Roboto: NextFont = NextRoboto({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "600"],
+// });
 
 export const metadata: Metadata = {
   title: "ZARaN IT",
@@ -25,7 +27,7 @@ export default function RootLayout({
   return (
     <Providers>
       <html lang="en">
-        <body className={Montserrat.className}>
+        <body>
           <main>{children}</main>
         </body>
       </html>

@@ -20,7 +20,7 @@ const OurTeamUi = () => {
                     </div>
                     <div className="p-6 text-white">
                         <h5 className="mb-2 text-lg font-bold text-center">Zehad Khan</h5>
-                        <p className="mb-4 text-center">PHP Developer</p>
+                        <p className="mb-4 text-base text-center">PHP Developer</p>
                         <div className="flex justify-center items-center gap-2">
                             <Link href='/' className="text-[#0077b5] mb-2 bg-transparent border-solid border-[1px] inline-block rounded-md px-3 py-2 text-xs font-medium uppercase leading-normal shadow-md transition hover:-translate-y-1 duration-200 ease-in-out hover:shadow-2xl focus:shadow-2xl focus:outline-none focus:ring-0 active:shadow-2xl">
                                 <FaLinkedinIn size={20} />
@@ -50,7 +50,7 @@ const OurTeamUi = () => {
                     </div>
                     <div className="p-6 text-white">
                         <h5 className="mb-2 text-lg font-bold text-center">Md. Nasir Uddin Shoyas</h5>
-                        <p className="mb-4 text-center">Full Stack Developer</p>
+                        <p className="mb-4 text-base text-center">Full Stack Developer</p>
                         <div className="flex justify-center items-center gap-2">
                             <Link href="https://www.linkedin.com/in/md-nasir-uddin4067"
                                 target="_blank" className="text-[#0077b5] mb-2 bg-transparent border-solid border-[1px] inline-block rounded-md px-3 py-2 text-xs font-medium uppercase leading-normal shadow-md transition hover:-translate-y-1 duration-200 ease-in-out hover:shadow-2xl focus:shadow-2xl focus:outline-none focus:ring-0 active:shadow-2xl">
@@ -84,7 +84,7 @@ const OurTeamUi = () => {
                     </div>
                     <div className="p-6 text-white">
                         <h5 className="mb-2 text-lg font-bold text-center">Rakibul Islam</h5>
-                        <p className="mb-4 text-center">MERN Stack Developer</p>
+                        <p className="mb-4 text-base text-center">MERN Stack Developer</p>
                         <div className="flex justify-center items-center gap-2">
                             <Link href="https://www.linkedin.com/in/iamrakib2/"
                                 target="_blank" className="text-[#0077b5] mb-2 bg-transparent border-solid border-[1px] inline-block rounded-md px-3 py-2 text-xs font-medium uppercase leading-normal shadow-md transition hover:-translate-y-1 duration-200 ease-in-out hover:shadow-2xl focus:shadow-2xl focus:outline-none focus:ring-0 active:shadow-2xl">
@@ -118,23 +118,23 @@ const OurTeamUi = () => {
                     </div>
                     <div className="p-6 text-white">
                         <h5 className="mb-2 text-lg font-bold text-center">Ashikul Islam Bitue</h5>
-                        <p className="mb-4 text-center">Django Developer</p>
+                        <p className="mb-4 text-base text-center">Django Developer</p>
                         <div className="flex justify-center items-center gap-2">
-                            <Link href='/' className="text-[#0077b5] mb-2 bg-transparent border-solid border-[1px] inline-block rounded-md px-3 py-2 text-xs font-medium uppercase leading-normal shadow-md transition hover:-translate-y-1 duration-200 ease-in-out hover:shadow-2xl focus:shadow-2xl focus:outline-none focus:ring-0 active:shadow-2xl">
+                            <Link href='' className="text-[#0077b5] mb-2 bg-transparent border-solid border-[1px] inline-block rounded-md px-3 py-2 text-xs font-medium uppercase leading-normal shadow-md transition hover:-translate-y-1 duration-200 ease-in-out hover:shadow-2xl focus:shadow-2xl focus:outline-none focus:ring-0 active:shadow-2xl">
                                 <FaLinkedinIn size={20} />
                             </Link>
 
-                            <Link href='/'
+                            <Link href=''
                                 className="text-[#000] mb-2 bg-transparent border-solid border-[1px] inline-block rounded-md px-3 py-2 text-xs font-medium uppercase leading-normal shadow-md transition hover:-translate-y-1 duration-200 ease-in-out hover:shadow-2xl focus:shadow-2xl focus:outline-none focus:ring-0 active:shadow-2xl">
                                 <FaGithub size={20} />
                             </Link>
 
-                            <Link href='/'
+                            <Link href='' 
                                 className="text-[#c13584] mb-2 bg-transparent border-solid border-[1px] inline-block rounded-md px-3 py-2 text-xs font-medium uppercase leading-normal shadow-md transition hover:-translate-y-1 duration-200 ease-in-out hover:shadow-2xl focus:shadow-2xl focus:outline-none focus:ring-0 active:shadow-2xl">
                                 <FaTelegramPlane size={20} />
                             </Link>
 
-                            <Link href='/'
+                            <Link href=''
                                 className="text-[#9146ff] mb-2 bg-transparent border-solid border-[1px] inline-block rounded-md px-3 py-2 text-xs font-medium uppercase leading-normal shadow-md transition hover:-translate-y-1 duration-200 ease-in-out hover:shadow-2xl focus:shadow-2xl focus:outline-none focus:ring-0 active:shadow-2xl">
                                 <FaBriefcase size={20} />
                             </Link>

@@ -19,7 +19,6 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import '../../../ui/HomeUi/ProjectsDone/Style.css'
 
 // import required modules
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
@@ -27,9 +26,9 @@ import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/module
 
 const ProjectsDone = () => {
   return (
-    <div className="mt-20 px-3 lg:px-0">
-      <h1 className="md:text-5xl text-3xl font-bold text-center text-blue"><CountUp delay={1} end={35} />+</h1>
-      <h1 className="md:text-3xl text-xl font-bold text-center text-gray">
+    <section className="mt-20 px-3 lg:px-0">
+      <h1 className="md:text-xl text-lg font-bold leading-normal text-blue text-center"><CountUp delay={1} end={35} />+</h1>
+      <h1 className="lg:text-4xl md:text-3xl text-2xl text-gray text-center mt-3">
         Projects we have done
       </h1>
 
@@ -105,7 +104,7 @@ const ProjectsDone = () => {
         </Swiper>
       </div>
 
-    </div>
+    </section>
   );
 };
 

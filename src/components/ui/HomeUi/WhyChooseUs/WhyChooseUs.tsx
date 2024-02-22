@@ -14,66 +14,64 @@ import { Autoplay, FreeMode } from 'swiper/modules';
 
 const WhyChooseArea = () => {
     return (
-        <div className="mt-20 px-3 lg:px-0">
-            <div className="grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-10">
-                <div className='text-center'>
-                    <span className="md:text-3xl text-lg font-bold text-blue">
+        <section className="px-3 lg:px-0 mt-24">
+            <div className="grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-4">
+                <div className="text-center lg:text-left">
+                    <h1 className="md:text-xl text-lg font-bold leading-normal text-blue">
                         WHY CHOOSE US
-                    </span>
-                    <p className="md:text-2xl text-base font-bold text-gray">
-                        Save your time with a <br />lot of features
-                    </p>
+                    </h1>
+                    <h4 className="lg:text-4xl md:text-3xl text-2xl text-gray mt-3">
+                        Save your time with <br />a lot of features
+                    </h4>
                 </div>
 
                 <div className="col-span-2">
                     <Swiper
-                        slidesPerView={2}
-                        spaceBetween={5}
-                        freeMode={true}
-                        pagination={{
-                            clickable: true,
+                        breakpoints={{
+                            340: {
+                                slidesPerView: 2,
+                                spaceBetween: 10,
+                            },
+                            700: {
+                                slidesPerView: 3,
+                                spaceBetween: 15,
+                            },
                         }}
+                        freeMode={true}
                         modules={[FreeMode, Autoplay]}
-                        autoplay={{ delay: 1500 }}
-                        loop= {true}
-                        className="mySwiper"
+                        // autoplay={{ delay: 2000 }}
+                        loop={true}
                     >
-                        <SwiperSlide>
-                            <div className="flex items-center">
-                                <div className="flex flex-col justify-center items-center">
-                                    <Image className="lg:w-32 lg:h-32 md:w-20 md:h-20 w-14 h-14" src={iconOne} alt="iconOne" />
-                                    <p className="font-bold md:text-xl text-base text-gray">Fast Performance</p>
-                                </div>
+                        <SwiperSlide className='slide-width'>
+                            <div className='flex flex-col gap-4 justify-center items-center'>
+                                <Image className="lg:w-32 lg:h-32 md:w-28 md:h-28 w-20 h-20" src={iconOne} alt="icon" />
+                                <p className="font-semibold text-[#453F41]">Fast Performance</p>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="flex items-center">
-                                <div className="flex flex-col justify-center items-center">
-                                    <Image className="lg:w-32 lg:h-32 md:w-20 md:h-20 w-14 h-14" src={iconTwo} alt="iconOne" />
-                                    <p className="font-bold md:text-xl text-base text-gray">Standard Code</p>
-                                </div>
+                        <SwiperSlide className='slide-width'>
+                            <div className='flex flex-col gap-4 justify-center items-center'>
+                                <Image className="lg:w-32 lg:h-32 md:w-28 md:h-28 w-20 h-20" src={iconTwo} alt="icon" />
+                                <p className="font-semibold text-[#453F41]">Standard Code</p>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="flex items-center">
-                                <div className="flex flex-col justify-center items-center">
-                                    <Image className="lg:w-32 lg:h-32 md:w-20 md:h-20 w-14 h-14" src={iconThree} alt="iconOne" />
-                                    <p className="font-bold md:text-xl text-base text-gray">Responsive Design</p>
-                                </div>
+                        <SwiperSlide className='slide-width'>
+                            <div className='flex flex-col gap-4 justify-center items-center'>
+                                <Image className="lg:w-32 lg:h-32 md:w-28 md:h-28 w-20 h-20" src={iconThree} alt="icon" />
+                                <p className="font-semibold text-[#453F41]">
+                                    Responsive Design
+                                </p>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <div className="flex items-center">
-                                <div className="flex flex-col justify-center items-center ">
-                                    <Image className="lg:w-32 lg:h-32 md:w-20 md:h-20 w-14 h-14" src={iconFour} alt="iconOne" />
-                                    <p className="font-bold md:text-xl text-base text-gray">Quick Support</p>
-                                </div>
+                        <SwiperSlide className='slide-width'>
+                            <div className='flex flex-col gap-4 justify-center items-center'>
+                                <Image className="lg:w-32 lg:h-32 md:w-28 md:h-28 w-20 h-20" src={iconFour} alt="icon" />
+                                <p className="font-semibold text-[#453F41]">Quick Support</p>
                             </div>
                         </SwiperSlide>
                     </Swiper>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

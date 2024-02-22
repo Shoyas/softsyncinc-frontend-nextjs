@@ -8,11 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        customFont: ["Montserrat", "sans-serif"],
-        // Add more custom font families as needed
-      },
-
       colors: {
         blue: '#0C5ADB',
         blueLight: '#407ebd',
