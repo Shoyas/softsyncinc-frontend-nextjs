@@ -25,13 +25,4 @@
   
   /* project done swiper */
   
-  .swiper-slide.slide-width{
-    margin-right: -160px !important;
-  }
-  
-  @media only screen and (max-width: 640px) {
-    .swiper-slide.slide-width{
-      margin-right: -100px !important;
-    }
-    
-  }
+ 
