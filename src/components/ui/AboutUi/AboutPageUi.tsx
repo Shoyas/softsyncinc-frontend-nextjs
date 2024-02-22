@@ -16,10 +16,10 @@ const AboutPageUi = () => {
 
                 <div>
                     <h4 className="md:text-3xl text-lg font-bold leading-normal text-blue text-center lg:text-left">
-                        About ZARaN IT
+                        About SoftSync INC
                     </h4>
                     <p className="text-lg text-gray mt-3 text-center lg:text-left">
-                        At ZARaN IT, we are passionate about transforming your ideas into visually stunning and impactful digital experiences.
+                        At SoftSync INC, we are passionate about transforming your ideas into visually stunning and impactful digital experiences.
                     </p>
                 </div>
             </div>
@@ -27,10 +27,10 @@ const AboutPageUi = () => {
             <div className="grid lg:grid-cols-2 grid-cols-1 items-center justify-center gap-6 mt-24">
                 <div>
                     <h4 className="md:text-3xl text-lg font-bold leading-normal text-blue text-center lg:text-left">
-                        About ZARaN IT
+                        About SoftSync INC
                     </h4>
                     <p className="text-lg text-gray mt-3 text-center lg:text-left">
-                        At ZARaN IT, we are passionate about transforming your ideas into visually stunning and impactful digital experiences.
+                        At SoftSync INC, we are passionate about transforming your ideas into visually stunning and impactful digital experiences.
                     </p>
                 </div>
 

@@ -14,9 +14,9 @@ import Providers from "@/lib/Providers";
 // });
 
 export const metadata: Metadata = {
-  title: "ZARaN IT",
+  title: "SoftSync INC",
   description:
-    "ZARaN IT provides software development, web development, content researching for youtube, SEO (Search Engine Optimization) and digital marketing.",
+    "SoftSync INC provides software development, web development, content researching for youtube, SEO (Search Engine Optimization) and digital marketing.",
 };
 
 export default function RootLayout({

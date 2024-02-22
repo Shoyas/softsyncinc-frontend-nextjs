@@ -2,7 +2,7 @@ import OurTeamUi from "@/components/ui/OurTeamUi/OurTeamUi";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "ZARaN IT | Our-Team",
+    title: "SoftSync INC | Our-Team",
     description: "Founder by ZARan-IT",
 };
 

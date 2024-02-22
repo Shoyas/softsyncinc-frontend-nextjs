@@ -42,7 +42,7 @@ const Sidebar = () => {
               <Image src={zaranItLogo} width={50} height={50} alt="logo" />
             </div>
           ) : (
-            "ZARaN IT"
+            "SoftSync INC"
           )}
         </Link>
       </div>

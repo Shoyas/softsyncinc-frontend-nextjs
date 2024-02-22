@@ -10,6 +10,7 @@ import projectSix from "../../../../asset/projects-img/power-x-1.webp";
 import projectSeven from "../../../../asset/projects-img/reform-car-hunter-1.webp";
 import Image from "next/image";
 
+import './style.css';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 

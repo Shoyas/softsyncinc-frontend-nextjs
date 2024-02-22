@@ -36,7 +36,7 @@ const Navbar = () => {
         <nav className="flex justify-between items-center py-6 max-w-7xl mx-auto px-3 lg:px-0">
           {/* logo */}
           <div>
-            <Link className="text-blue font-semibold text-xl" href="/">ZARaN IT</Link>
+            <Link className="text-blue font-semibold text-xl" href="/">SoftSync INC</Link>
           </div>
 
           {/* desktop nav */}
