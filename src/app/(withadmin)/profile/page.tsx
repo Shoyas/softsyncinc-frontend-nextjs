@@ -1,4 +1,4 @@
-import CommonProfilePage from "@/components/ui/DashboardUi/CommonProfile";
+import CommonProfilePage from "@/components/ui/DashboardUi/Profile/CommonProfile";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

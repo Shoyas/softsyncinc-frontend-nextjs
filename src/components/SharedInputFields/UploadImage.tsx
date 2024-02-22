@@ -76,7 +76,7 @@ const UploadImage = ({ name }: ImageUploadProps) => {
         {imageUrl ? (
           <Image
             src={imageUrl}
-            alt="avatar"
+            alt={name}
             style={{ width: "100%" }}
             width={100}
             height={100}

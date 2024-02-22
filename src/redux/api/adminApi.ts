@@ -7,10 +7,11 @@ const ADMIN_URL = "/admin";
 export const adminApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getAllAdmin: build.query({
-      query: () => {
+      query: (arg: Record<string, any>) => {
         return {
           url: ADMIN_URL,
           method: "GET",
+          params: arg,
         };
       },
       transformResponse: (response: IAdmin[], meta: IMeta) => {

@@ -13,5 +13,5 @@ export const workSchema = yup.object().shape({
   title: yup.string().required("Title is required"),
   description: yup.string().required("Description is required"),
   workImg: yup.string().optional(),
-  authorId: yup.string().required("Author is required"),
+  authorId: yup.string().optional(),
 });

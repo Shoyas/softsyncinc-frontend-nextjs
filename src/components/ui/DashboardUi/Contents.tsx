@@ -1,7 +1,7 @@
 "use client";
 
 import { Layout } from "antd";
-import ZaranBreadCrumb from "./ZaranBreadCrumb";
+import ZaranBreadCrumb from "../../SharedInputFields/ZaranBreadCrumb";
 import Header from "./Header";
 const { Content } = Layout;
 

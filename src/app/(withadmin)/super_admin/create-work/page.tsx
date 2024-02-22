@@ -1,5 +1,5 @@
 
-import CommonCreateWorkPage from "@/components/ui/DashboardUi/CommonCreateWork";
+import CommonCreateWorkPage from "@/components/ui/DashboardUi/Work/CommonCreateWork";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

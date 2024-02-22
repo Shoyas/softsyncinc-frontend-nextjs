@@ -7,10 +7,11 @@ const WORK_URL = "/works";
 export const workApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getAllWork: build.query({
-      query: () => {
+      query: (arg: Record<string, any>) => {
         return {
           url: WORK_URL,
           method: "GET",
+          params: arg,
         };
       },
       transformResponse: (response: IWork[], meta: IMeta) => {

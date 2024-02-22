@@ -1,4 +1,4 @@
-import CommonChangePasswordPage from "@/components/ui/DashboardUi/CommonChangePassword";
+import CommonChangePasswordPage from "@/components/ui/DashboardUi/Profile/CommonChangePassword";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

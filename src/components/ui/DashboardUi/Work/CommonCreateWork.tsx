@@ -1,15 +1,15 @@
 "use client";
 
 import { getUserInfo } from "@/services/auth.service";
-import ZaranBreadCrumb from "./ZaranBreadCrumb";
-import ActionBar from "../ActionBar";
-import Form from "@/components/Forms/Form";
+import ZaranBreadCrumb from "../../../SharedInputFields/ZaranBreadCrumb";
+import ActionBar from "../../ActionBar";
+import Form from "@/components/SharedInputFields/Forms/Form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { workSchema } from "@/schemas/allSchema";
 import { Button, Col, Row, message } from "antd";
-import FormInput from "@/components/Forms/FormInput";
-import FormTextArea from "@/components/Forms/FormTextArea";
-import UploadImage from "./UploadImage";
+import FormInput from "@/components/SharedInputFields/Forms/FormInput";
+import FormTextArea from "@/components/SharedInputFields/Forms/FormTextArea";
+import UploadImage from "../../../SharedInputFields/UploadImage";
 import { useCreateWorkMutation } from "@/redux/api/workApi";
 import { useRouter } from "next/navigation";
 
@@ -20,7 +20,6 @@ const CommonCreateWorkPage = () => {
 
   const createWorkOnSubmit = async(values: any) => {
     const obj = {...values, authorId: adminId};
-    console.log(obj);
     const file = obj["file"];
     delete obj['file'];
     const data = JSON.stringify(obj);

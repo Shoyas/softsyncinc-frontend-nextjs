@@ -1,7 +1,7 @@
 "use client";
 
-import Form from "@/components/Forms/Form";
-import FormInput from "@/components/Forms/FormInput";
+import Form from "@/components/SharedInputFields/Forms/Form";
+import FormInput from "@/components/SharedInputFields/Forms/FormInput";
 import { authKey } from "@/constants/storageKey";
 import { useChangePasswordByTokenMutation } from "@/redux/api/authApi";
 import { changePasswordSchema } from "@/schemas/allSchema";
@@ -13,8 +13,8 @@ import {
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Button, Col, Row, message } from "antd";
 import { useRouter } from "next/navigation";
-import ZaranBreadCrumb from "./ZaranBreadCrumb";
-import ActionBar from "../ActionBar";
+import ZaranBreadCrumb from "../../../SharedInputFields/ZaranBreadCrumb";
+import ActionBar from "../../ActionBar";
 
 const CommonChangePasswordPage = () => {
   const { role, adminId } = getUserInfo() as any;

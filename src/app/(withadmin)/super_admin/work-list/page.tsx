@@ -1,4 +1,4 @@
-import CommonWorkListPage from "@/components/ui/DashboardUi/CommonWorkList";
+import CommonWorkListPage from "@/components/ui/DashboardUi/Work/CommonWorkList";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ const WorkListPage = () => {
   return (
     <div>
         <CommonWorkListPage />
-    </div>
+    </div> 
   );
 };
 

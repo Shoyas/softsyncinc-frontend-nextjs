@@ -3,7 +3,7 @@
 import ErrorPage from "@/app/error";
 import LoadingPage from "@/app/loading";
 import ActionBar from "@/components/ui/ActionBar";
-import ZaranBreadCrumb from "@/components/ui/DashboardUi/ZaranBreadCrumb";
+import ZaranBreadCrumb from "@/components/SharedInputFields/ZaranBreadCrumb";
 import { useGetSingleAdminQuery } from "@/redux/api/adminApi";
 import { getUserInfo } from "@/services/auth.service";
 import { IAdmin } from "@/types";
