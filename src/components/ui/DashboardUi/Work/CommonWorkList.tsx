@@ -15,6 +15,7 @@ import {
 import ZaranTable from "@/components/SharedInputFields/ZaranTable";
 import ZaranModal from "@/components/SharedInputFields/ZaranModal";
 import Image from "next/legacy/image";
+import ErrorPage from "@/app/error";
 
 
 const CommonWorkListPage = () => {
@@ -39,7 +40,7 @@ const CommonWorkListPage = () => {
     
     const debouncedTerm = useDebounced({
       searchQuery: searchTerm,
-      delay: 600,
+      delay: 60,
     });
 
     if(!!debouncedTerm){
@@ -47,9 +48,12 @@ const CommonWorkListPage = () => {
     }
     const {data, isLoading, isError} = useGetAllWorkQuery({...query});
     const works = data?.works;
-    
     const meta = data?.meta;
     
+    if (isError) {
+      return <ErrorPage />;
+    }
+
     const columns = [
       {
         title: 'Image',
@@ -92,7 +96,7 @@ const CommonWorkListPage = () => {
           return(
             <>
             <Link href={`/super_admin/work-list/edit/${data}`}>
-              <Button type="primary" onClick={() => console.log(data)} style={{margin: "0px 5px"}}>
+              <Button type="primary" style={{margin: "0px 5px"}}>
               <EditOutlined/>
               </Button>
             </Link>

@@ -15,3 +15,13 @@ export const workSchema = yup.object().shape({
   workImg: yup.string().optional(),
   authorId: yup.string().optional(),
 });
+
+export const teamMemberSchema = yup.object().shape({
+  name: yup.string().required("Name is required"),
+  teamPersonImg: yup.string().optional(),
+  designation: yup.string().required("Designation is required"),
+  linkedin: yup.string().optional(),
+  github: yup.string().optional(),
+  email: yup.string().optional(),
+  portfolio: yup.string().optional(),
+});

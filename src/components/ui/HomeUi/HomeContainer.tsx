@@ -11,12 +11,13 @@ const Navbar = dynamic(() => import("../../sharedUi/Navbar"), {
   ssr: false,
 });
 
-const HomeContainerPage = () => {
+const HomeContainerPage = ({ip, res}: any) => {
+  
   return (
     <div>
       <Navbar />
       <div className="max-w-7xl mx-auto">
-        <HeroArea />
+        <HeroArea ip={ip} res={res}/>
         <DemoArea />
         <WhyChooseArea />
         <ResponsiveLayoutArea />

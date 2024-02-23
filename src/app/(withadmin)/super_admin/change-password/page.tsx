@@ -2,8 +2,8 @@ import CommonChangePasswordPage from "@/components/ui/DashboardUi/Profile/Common
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ZARaN IT | Change Password",
-  description: "Founded by ZARan-IT",
+  title: "SoftSync INC | Change Password",
+  description: "Founded by SoftSync INC",
 };
 
 const ChangePasswordPage = () => {

@@ -3,13 +3,13 @@ import CommonCreateWorkPage from "@/components/ui/DashboardUi/Work/CommonCreateW
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ZARaN IT | Add Work",
-  description: "Founded by ZARan-IT",
+  title: "SoftSync INC | Add Work",
+  description: "Founded by SoftSync INC",
 };
 
 const CreateWorkPage = () => {
   return (
-    <div>
+    <div style={{ margin: "10px" }}>
         <CommonCreateWorkPage />
     </div>
   );

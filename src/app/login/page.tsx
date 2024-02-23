@@ -2,8 +2,8 @@ import CommonLoginPage from "@/components/ui/LoginUi/CommonLoginPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ZARaN IT | Login",
-  description: "Founded by ZARan-IT",
+  title: "SoftSync INC | Login",
+  description: "Founded by SoftSync INC",
 };
 
 const LoginPage = () => {

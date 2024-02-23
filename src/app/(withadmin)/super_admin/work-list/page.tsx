@@ -2,8 +2,8 @@ import CommonWorkListPage from "@/components/ui/DashboardUi/Work/CommonWorkList"
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ZARaN IT | Work List",
-  description: "Founded by ZARan-IT",
+  title: "SoftSync INC | Work List",
+  description: "Founded by SoftSync INC",
 };
 
 const WorkListPage = () => {

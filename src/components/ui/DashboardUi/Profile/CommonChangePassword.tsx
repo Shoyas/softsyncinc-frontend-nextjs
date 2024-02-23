@@ -17,7 +17,7 @@ import ZaranBreadCrumb from "../../../SharedInputFields/ZaranBreadCrumb";
 import ActionBar from "../../ActionBar";
 
 const CommonChangePasswordPage = () => {
-  const { role, adminId } = getUserInfo() as any;
+  const { role } = getUserInfo() as any;
   const router = useRouter();
   const signOut = () => {
     removeUserInfo(authKey);

@@ -12,13 +12,12 @@ import { Button, Col, Row, message } from "antd";
 import { useRouter } from "next/navigation";
 import FormInput from "@/components/SharedInputFields/Forms/FormInput";
 import FormTextArea from "@/components/SharedInputFields/Forms/FormTextArea";
-import UploadImage from "@/components/SharedInputFields/UploadImage";
 import Image from "next/legacy/image";
 
 const CommonEditWorkPage = ({ id }: any) => {
   const { role } = getUserInfo() as any;
   const router = useRouter();
-  const { data, isLoading, isError } = useGetSingleWorkQuery(id);
+  const { data } = useGetSingleWorkQuery(id);
   const [updateWork] = useUpdateWorkMutation();
 
   const editWorkOnSubmit = async (values: any) => {
@@ -42,7 +41,7 @@ const CommonEditWorkPage = ({ id }: any) => {
   return (
     <div style={{ margin: "10px" }}>
       <ZaranBreadCrumb
-        items={[
+        items={[ 
           {
             label: `${role}`,
             link: `/${role}`,

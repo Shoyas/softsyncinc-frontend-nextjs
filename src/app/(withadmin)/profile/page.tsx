@@ -2,8 +2,8 @@ import CommonProfilePage from "@/components/ui/DashboardUi/Profile/CommonProfile
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ZARaN IT | Profile",
-  description: "Founded by ZARan-IT. It's a profile page of zaran-it.",
+  title: "SoftSync INC | Profile",
+  description: "Founded by SoftSync INC. It's a profile page of SoftSync INC.",
 };
 
 const ProfilePage = () => {

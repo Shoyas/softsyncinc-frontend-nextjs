@@ -7,10 +7,11 @@ const TEAM_MEMBER_URL = "/team-members";
 export const teamMemberApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getAllTeamMember: build.query({
-      query: () => {
+      query: (arg: Record<string, any>) => {
         return {
           url: TEAM_MEMBER_URL,
           method: "GET",
+          params: arg,
         };
       },
       transformResponse: (response: ITeamMember[], meta: IMeta) => {

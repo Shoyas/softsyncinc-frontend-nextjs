@@ -12,13 +12,14 @@ import FormTextArea from "@/components/SharedInputFields/Forms/FormTextArea";
 import UploadImage from "../../../SharedInputFields/UploadImage";
 import { useCreateWorkMutation } from "@/redux/api/workApi";
 import { useRouter } from "next/navigation";
-
+ 
 const CommonCreateWorkPage = () => {
   const { role, adminId } = getUserInfo() as any;
   const router = useRouter();
   const [createWork] = useCreateWorkMutation();
 
   const createWorkOnSubmit = async(values: any) => {
+    message.loading('Adding...');
     const obj = {...values, authorId: adminId};
     const file = obj["file"];
     delete obj['file'];
@@ -26,11 +27,11 @@ const CommonCreateWorkPage = () => {
     const formData = new FormData();
     formData.append("file", file as Blob);
     formData.append("data", data); 
-    message.loading('Adding...');
+    
     try {
       const res = await createWork(formData);
       if(res){
-        router.push('/super_admin/work-list');
+        router.push(`/${role}/work-list`);
         message.success('Work added successfully');
       }
     } catch (error: any) {
@@ -39,7 +40,7 @@ const CommonCreateWorkPage = () => {
 
   };
   return (
-    <div style={{ margin: "10px" }}>
+    <div>
       <ZaranBreadCrumb
         items={[
           {

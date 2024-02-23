@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Layout, Menu } from "antd";
 import Link from "next/link";
-import zaranItLogo from "../../../asset/zaran-it-logo.png";
+import SoftSyncINCLogo from "../../../asset/zaran-it-logo.png";
 import Image from "next/image";
 import SidebarItems from "./SidebarItems";
 import { USER_ROLE } from "@/constants/role";
@@ -40,7 +40,7 @@ const Sidebar = () => {
         <Link href={"/"} className="text-white">
           {collapsed ? (
             <div className="mx-auto">
-              <Image src={zaranItLogo} width={50} height={50} alt="logo" />
+              <Image src={SoftSyncINCLogo} width={50} height={50} alt="logo" />
             </div>
           ) : (
             "SoftSync INC"
