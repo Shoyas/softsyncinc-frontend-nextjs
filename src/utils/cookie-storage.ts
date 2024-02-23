@@ -6,6 +6,7 @@ export const setCookie = (
   name: string,
   value: string,
   options: { maxAge: number }
+
 ) => {
   const cookie = `${name}=${value}; Max-Age=${options.maxAge}; Path=/`;
   res.setHeader("Set-Cookie", cookie);
