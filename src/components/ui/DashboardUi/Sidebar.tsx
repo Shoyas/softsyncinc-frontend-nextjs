@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Layout, Menu } from "antd";
 import Link from "next/link";
 import SoftSyncINCLogo from "../../../asset/zaran-it-logo.png";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import SidebarItems from "./SidebarItems";
 import { USER_ROLE } from "@/constants/role";
 import { getUserInfo } from "@/services/auth.service";

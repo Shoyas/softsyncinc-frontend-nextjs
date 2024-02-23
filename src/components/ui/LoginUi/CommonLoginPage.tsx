@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Button, Col, Row, message } from "antd";
 import { SubmitHandler } from "react-hook-form";
 import LoginImage from "../../../asset/next-page/Computer-login-amico.svg";

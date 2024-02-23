@@ -2,13 +2,27 @@
 import Typewriter from 'typewriter-effect';
 import imagesOne from "../../../../asset/v1.webp";
 import imagesTwo from "../../../../asset/v2.webp";
+import { useEffect } from "react";
+import { setCookie } from "@/utils/cookie-storage";
 import Image from "next/image";
 // import avatarAnimation from "../../../../asset/animationIcon/avatar-animation.json"
 // import cloudAnimation from "../../../../asset/animationIcon/cloud.json"
 // import gradientAnimation from "../../../../asset/animationIcon/gradient.json"
 
+const HeroArea = ({ip, res}: any) => {
+    console.log("IP: ", ip);
 
-const HeroArea = () => {
+    useEffect(() => {
+
+        // if (res) {
+        //     setCookie(res, 'IPName', ip, {
+        //         maxAge: 86400,
+        //     });
+        // }
+        // console.log(ip);
+    }, [res, ip]);
+
+
     return (
         <div className="mt-20 px-3 lg:px-0">
             <div className="flex flex-col items-center justify-center text-center md:mt-32 mt-16">
