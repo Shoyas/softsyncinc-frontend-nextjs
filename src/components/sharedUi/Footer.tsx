@@ -70,7 +70,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <hr className="mb-5 max-w-7xl mx-auto border-gray border-[1px]" />
+            <hr className="mb-5 max-w-7xl mx-auto border-[1px]" />
 
             <div>
                 <div className="flex pb-5 px-3 mx-auto text-sm flex-col max-w-screen-lg items-center">
@@ -159,7 +159,7 @@ const Footer = () => {
                         </Link>
                         
                     </div>
-                    <div className="my-5">© Copyright {new Date().getFullYear()}. All Rights Reserved.</div>
+                    <div className="my-5">© Copyright {new Date().getFullYear()}. All Rights Reserved By SoftSync INC.</div>
                 </div>
             </div>
         </>
