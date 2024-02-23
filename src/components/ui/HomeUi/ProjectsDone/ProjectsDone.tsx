@@ -1,6 +1,5 @@
 "use client"
 import CountUp from 'react-countup';
-import "../../../ui/HomeUi/ProjectsDone/Style.css"
 import projectOne from "../../../../asset/projects-img/pc-builder-1.webp";
 import projectTwo from "../../../../asset/projects-img/athena-1.webp";
 import projectThree from "../../../../asset/projects-img/creative-agency-1.webp";
