@@ -8,8 +8,10 @@ import iconFour from "../../../../asset/4.webp";
 import Image from "next/image";
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import {  Pagination } from 'swiper/modules';
+// import required modules
+import { FreeMode, Pagination } from 'swiper/modules';
 
 
 
@@ -30,28 +32,31 @@ const WhyChooseArea = () => {
                     </h4>
                 </div>
 
-                <div className="lg:col-span-2">
+                <div className="col-span-2">
                     <Swiper
-                        slidesPerView={1}
-                        spaceBetween={10}
-                        pagination={{
-                            clickable: true,
-                        }}
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        freeMode={true}
+                        // pagination={{
+                        //     clickable: true,
+                        // }}
+                        loop={true}
+
                         breakpoints={{
-                            640: {
-                                slidesPerView: 2,
-                                spaceBetween: 20,
-                            },
+                            // 640: {
+                            //     slidesPerView: 4,
+                            //     spaceBetween: 0,
+                            // },
                             768: {
-                                slidesPerView: 4,
-                                spaceBetween: 40,
+                                slidesPerView: 3,
+                                spaceBetween: -160,
                             },
                             1024: {
-                                slidesPerView: 5,
-                                spaceBetween: 50,
+                                slidesPerView: 3,
+                                spaceBetween: -170,
                             },
                         }}
-                        modules={[Pagination]}
+                        modules={[FreeMode, Pagination]}
                         className="mySwiper"
                     >
                         <SwiperSlide className='slide-width'>
