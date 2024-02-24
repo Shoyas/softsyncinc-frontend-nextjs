@@ -24,18 +24,17 @@ const HomePage = () => {
 export default HomePage;
 */
 
-
 import HomeContainerPage from "@/components/ui/HomeUi/HomeContainer";
-import { NextApiResponse } from "next";
 import Head from "next/head";
 import { headers } from "next/headers";
-
-
-
-const header = headers();
-const ip = (header.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0];
+import { NextApiResponse } from "next";
 
 const HomePage = ({ res }: { res: NextApiResponse }) => {
+  let ip = "127.0.0.1";
+  if (res) {
+    const header = headers();
+    ip = (header.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0];
+  }
 
   return (
     <div>
@@ -48,12 +47,11 @@ const HomePage = ({ res }: { res: NextApiResponse }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HomeContainerPage ip={ip} res={res}/>
+      <HomeContainerPage ip={ip} />
     </div>
   );
 };
 
-// Assuming you have access to Next.js response object here
 HomePage.getInitialProps = ({ res }: { res: NextApiResponse }) => {
   return { res };
 };
