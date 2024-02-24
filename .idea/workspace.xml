@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a6b550a-aa5d-4f4f-9f5f-15a0f687d9c0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(withadmin)/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(withadmin)/admin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(withadmin)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(withadmin)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(withadmin)/super_admin/team-member-list/edit/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(withadmin)/super_admin/team-member-list/edit/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/file/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/file/route.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +47,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "watcher.settings",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.3.4\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\wamp64\\www\\zaran-it-frontend-nextjs\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -50,13 +55,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\zaran-it-frontend-nextjs\src" />
     </key>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14015.96" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -70,6 +68,7 @@
       <workItem from="1707763901825" duration="1539000" />
       <workItem from="1707772351790" duration="425000" />
       <workItem from="1708101856146" duration="4122000" />
+      <workItem from="1708731631192" duration="2628000" />
     </task>
     <servers />
   </component>

@@ -19,7 +19,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
     } else {
       setIsLoading(true);
     }
-  }, [router]);
+  }, [adminLoggedIn, router]);
 
   if (!isLoading) {
     return <LoadingPage />;
